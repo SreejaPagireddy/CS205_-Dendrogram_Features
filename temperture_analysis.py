@@ -21,6 +21,6 @@ plt.xlabel('Index')
 plt.ylabel("Distance")
 
 #Dendogram
-dendrogram(distance_measure, labels = df['City'], leaf_rotation= 90)
+dendrogram(distance_measure, labels = df['City'].values, leaf_rotation= 90)
 
 plt.show()
