@@ -22,14 +22,14 @@ sc = StandardScaler()
 X = sc.fit_transform(df_subset)
 #distance measure[]
 distance_measure = linkage(X, method='ward', metric='euclidean')
-
+plt.figure(figsize=(12, 8))
+dendrogram(distance_measure, labels = df['City'].values, leaf_rotation= 90)
 #Title of the plot
-plt.title('Hierarchical Dendogram')
-plt.xlabel('Index')
-plt.ylabel("Distance")
+plt.title('Hierarchical Weather Clustering')
+plt.xlabel('City')
+plt.ylabel('Ward Linkage Distance')
 
 #Dendogram
-dendrogram(distance_measure, labels = df['City'].values, leaf_rotation= 90)
 
 plt.tight_layout()
 plt.show()
