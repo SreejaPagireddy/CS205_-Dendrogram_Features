@@ -18,11 +18,8 @@ df_subset = df.loc[:, ['Temperature (Celsius)', 'Wind Speed (m/s)']]
 
 
 #normalization
-encoder = OneHotEncoder(sparse_output=False)
-X_enc = encoder.fit_transform(df_subset)
 sc = StandardScaler()
-x_sc = sc.fit_transform(df_subset)
-X = np.hstack([X_enc, x_sc])
+X = sc.fit_transform(df_subset)
 #distance measure[]
 distance_measure = linkage(X, method='ward', metric='euclidean')
 

@@ -159,7 +159,7 @@ def backward_search_demo(data):
     #print(f'It took, {round(length, 2)} seconds')
 
 def main():
-    open_file = open("CS170_Large_DataSet__32.txt")
+    open_file = open("synthetic_datasets/CS170_Small_DataSet__1.txt")
     data = open_file.readlines()
     #parsing data
     data = [[float(x) for x in row.strip().split("  ")] for row in data]
