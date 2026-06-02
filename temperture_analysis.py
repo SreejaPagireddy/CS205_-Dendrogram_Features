@@ -23,6 +23,7 @@ X = sc.fit_transform(df_subset)
 #distance measure[]
 distance_measure = linkage(X, method='ward', metric='euclidean')
 plt.figure(figsize=(12, 8))
+plt.savefig('name.png', dpi=400, bbox_inches='tight')
 dendrogram(distance_measure, labels = df['City'].values, leaf_rotation= 90)
 #Title of the plot
 plt.title('Hierarchical Weather Clustering')
@@ -33,4 +34,5 @@ plt.ylabel('Ward Linkage Distance')
 
 plt.tight_layout()
 plt.show()
+
 
