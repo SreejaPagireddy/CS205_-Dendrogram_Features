@@ -1,6 +1,7 @@
 import pandas as pd
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, linkage
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 #cleaning and reading data
 df = pd.read_csv('top100cities_weather_data.csv')
@@ -29,3 +30,4 @@ dendrogram(distance_measure, labels = df['City'].values, leaf_rotation= 90)
 
 plt.tight_layout()
 plt.show()
+
